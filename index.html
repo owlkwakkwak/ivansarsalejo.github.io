@@ -1,636 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Ivan Sarsalejo</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/306152829_784607196095403_7164710014232648823_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_eui2=AeF9XZMlC8xdmge0M0N4_oB0yS0ydZRvRlzJLTJ1lG9GXH9eD4gKwo6oWp7a8WNF5dtjpHQcRn0jt_SqE_FRB-r8&_nc_ohc=eFtfQxHoq5gAX-zIx4p&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfBy7tT42DnFQG11VAjhBQWS7LumeM3vBV2M0e2HEqW_2g&oe=64E531C3" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Updated: Jul 27 2023 with Bootstrap v5.3.1
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body>
-
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/306152829_784607196095403_7164710014232648823_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_eui2=AeF9XZMlC8xdmge0M0N4_oB0yS0ydZRvRlzJLTJ1lG9GXH9eD4gKwo6oWp7a8WNF5dtjpHQcRn0jt_SqE_FRB-r8&_nc_ohc=eFtfQxHoq5gAX-zIx4p&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfBy7tT42DnFQG11VAjhBQWS7LumeM3vBV2M0e2HEqW_2g&oe=64E531C3" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Ivan</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:220px;z-index:2" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-ripple w3-large w3-hide-large" onclick="closeSidebar()">Close<span class="w3-right">&times;</span></button>
+  <button class="w3-bar-item w3-button w3-ripple collapsed" onclick="dropdown(this)">
+    <span>Set Language</span>
+    <span class="w3-right"><svg width="10" height="10"><path d="M1 3L5 7L9 3Z"/></svg></span>
+    <span class="w3-right"><svg width="10" height="10"><path d="M1 7L5 3L9 7Z"/></svg></span>
+  </button>
+    <div class="w3-bar-block w3-light-grey">
+      <div class="w3-bar-item w3-button" onclick="selectLang(this)">
+        <input id="langEn" class="w3-radio" type="radio" name="lang" value="en" checked>
+        <label for="langEn">English</label>
       </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Ivan Sarsalejo</h1>
-      <p>I'm <span class="typed" data-typed-items="Photographer, Photo Editor, Freelancer, Video Editor,Graphic Designer"></span></p>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>I'm Ivan, and I'm happy to welcome you to my world of creativity.  I am a passionate person who is motivated by diligence, integrity, and devotion. I've started a journey where each frame, pixel, and design component comes together to create enthralling narratives because I have a heart that beats for photography, picture editing, video editing, graphic design, Photo Enhancing, Color Grading, Lay Out, and freelancing.
-            
-          </p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="hhttps://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/306152829_784607196095403_7164710014232648823_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_eui2=AeF9XZMlC8xdmge0M0N4_oB0yS0ydZRvRlzJLTJ1lG9GXH9eD4gKwo6oWp7a8WNF5dtjpHQcRn0jt_SqE_FRB-r8&_nc_ohc=eFtfQxHoq5gAX-zIx4p&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfBy7tT42DnFQG11VAjhBQWS7LumeM3vBV2M0e2HEqW_2g&oe=64E531C3" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>About</h3>
-            <p class="fst-italic">
-              
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>10 November 2004</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong> <span>Philippines</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+639268202109</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Davao</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>18</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>School level:</strong> <span>1st year college</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>ivansarsalejov@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-            </div>
-            <p>
-               As a freelancer on the variety of jobs that come my way. I can move between different positions and duties with ease because to my adaptability and open-mindedness. Due to my flexibility, I have worked with a variety of customers, gaining knowledge from each interaction and applying it to improve my job.
-            </p>
-          </div>
-        </div>
-
+      <div class="w3-bar-item w3-button" onclick="selectLang(this)">
+        <input id="langAr" class="w3-radio" type="radio" name="lang" value="ar">
+        <label for="langAr">Arabic</label>
       </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>This is base on my personal Clients and my online Clients</p>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="38" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> personal client & online client</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="46" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong>personal client & online client </p>
-            </div>
-          </div>
-
-         
-        </div>
-
-      </div>
-    </section><!-- End Facts Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>Welcome to my creative realm! I'm Ivan, and I'm delighted to introduce you to the mosaic of skills that define my journey. A dedicated enthusiast in the world of visual arts and freelancing, I've honed a diverse skill set that merges technical prowess with artistic flair.</p>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">Lighroom <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Color Grading <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Photo Enhancing/ Color Correction <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Photo Editing <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Photoshop<i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">Video Editing <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Lay Out <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Graphic Design <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p></p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Ivan Sarsalejo</h4>
-              <p><em>Dedicated and hardworking professional seeking a position where I can contribute my strong work ethic, willingness to be trained, and honest demeanor to achieve both personal and company success.</em></p>
-              <ul>
-                <li>Davao Del Norte, Philippines</li>
-                <li>+639268202109</li>
-                <li>ivansarsalejov@gmail.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Elementary &amp; Cabili Elementary School</h4>
-              <h5>2013 - 2018</h5>
-            </div>
-            <div class="resume-item">
-              <h4>HighSchool &amp; Quezon National HighSchool</h4>
-              <h5>2018 - 2021</h5>
-              <div class="resume-item">
-                <h4>Senior HighSchool &amp; Panabo City Senior HighSchool</h4>
-                <h5>2021 - 2023</h5>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Experience</h3>
-            <div class="resume-item">
-              <h4>Photographer/ Photo Editor / Video Editor</h4>
-              <h5>2021 - present</h5>
-              <p><em>In my own small photography business </em></p>
-              
-            </div>
-            <div class="resume-item">
-              <h4>Champion at in Photo Contest</h4>
-              <h5>2022</h5>
-              <p><em>On the spot photo contest Panabo City</em></p>
-              <ul>
-                
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>these are some examples of my work, becuase i can't find my other works/output</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-             
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="C:\Users\User\Desktop\iPortfolio\New folder\14.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="C:\Users\User\Desktop\iPortfolio\New folder\13.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="C:\Users\User\Desktop\iPortfolio\New folder\12.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="https://scontent.fdvo2-2.fna.fbcdn.net/v/t39.30808-6/341904405_260373669717300_6443787550376877034_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEoFkKxxePnUiYRKhqQQmefQ3rJgWC2TtlDesmBYLZO2dPiWdeMEE4lk7P1oielrZ92xJtHGqLYcbp1kZj3WWVD&_nc_ohc=I7dVs9t7rR0AX8swSMb&_nc_ht=scontent.fdvo2-2.fna&oh=00_AfCeTByBRpXWpqHWyMOdVihoyyXh4Ly5urKov6XTdtWw9Q&oe=64E502A6" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fdvo2-2.fna.fbcdn.net/v/t39.30808-6/341904405_260373669717300_6443787550376877034_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEoFkKxxePnUiYRKhqQQmefQ3rJgWC2TtlDesmBYLZO2dPiWdeMEE4lk7P1oielrZ92xJtHGqLYcbp1kZj3WWVD&_nc_ohc=I7dVs9t7rR0AX8swSMb&_nc_ht=scontent.fdvo2-2.fna&oh=00_AfCeTByBRpXWpqHWyMOdVihoyyXh4Ly5urKov6XTdtWw9Q&oe=64E502A6" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341624624_964880934870045_7674896106972669350_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeE4fzDkNEQyUYuU2pUYGiM0WwQjlCG4cKhbBCOUIbhwqBzgc96qP0m85Qke6LoMNuGWuBw70HXUu_rDrqzI7-fL&_nc_ohc=ozv_OIw8Z4gAX_4SHB5&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfBBkcQ3Rxh6h727oG3LLCrr89o-TLuJn-B6LbdOsv8HMw&oe=64E63873" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341624624_964880934870045_7674896106972669350_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeE4fzDkNEQyUYuU2pUYGiM0WwQjlCG4cKhbBCOUIbhwqBzgc96qP0m85Qke6LoMNuGWuBw70HXUu_rDrqzI7-fL&_nc_ohc=ozv_OIw8Z4gAX_4SHB5&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfBBkcQ3Rxh6h727oG3LLCrr89o-TLuJn-B6LbdOsv8HMw&oe=64E63873" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341859963_1307374486519502_525754314500930256_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEAXkHFCr7rB0rl6PALufl_5sGplcyTzGbmwamVzJPMZvtc_yCMUSvCPQCxbHw1EVfKpuagUBAXAUlr1leUJhjS&_nc_ohc=jsAxIuukxGwAX_qJra7&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfCwSB-dj6vPzyIKoEi02TkC9sODw4oaYjQi78ZbdcK45Q&oe=64E566F5" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341859963_1307374486519502_525754314500930256_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEAXkHFCr7rB0rl6PALufl_5sGplcyTzGbmwamVzJPMZvtc_yCMUSvCPQCxbHw1EVfKpuagUBAXAUlr1leUJhjS&_nc_ohc=jsAxIuukxGwAX_qJra7&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfCwSB-dj6vPzyIKoEi02TkC9sODw4oaYjQi78ZbdcK45Q&oe=64E566F5" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341021088_548809130708123_7418717317333128323_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMEsuEVdBIaboRgA6zEWLVW5qpI1tXKp9bmqkjW1cqn6cpcrZie7F7YxR5SVKKnAP8Vko688seggaavRjf0cFT&_nc_ohc=smElvoyutgUAX-N2IEk&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfAW4UEfVLj8cmgQD_R4OOHjm0HisMj7jKb0LN-GGORWrA&oe=64E4CB10" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341021088_548809130708123_7418717317333128323_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMEsuEVdBIaboRgA6zEWLVW5qpI1tXKp9bmqkjW1cqn6cpcrZie7F7YxR5SVKKnAP8Vko688seggaavRjf0cFT&_nc_ohc=smElvoyutgUAX-N2IEk&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfAW4UEfVLj8cmgQD_R4OOHjm0HisMj7jKb0LN-GGORWrA&oe=64E4CB10" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/343980783_562200419332243_3117323347302229513_n.jpg?stp=dst-jpg_p600x600&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGHD1e3FXIcisYub-JI86t4-i5mlKnUr576LmaUqdSvnlaNC1qFtCayjdDDPSHJcn5vEnyLAzrj97ces_8eBeM_&_nc_ohc=WThKrOgd3XkAX8iyjsw&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDVAKYwemlgK7L9oP6n6c165zaM6Wq4cx2nqhBV-VXpUg&oe=64E5B38C" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/343980783_562200419332243_3117323347302229513_n.jpg?stp=dst-jpg_p600x600&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGHD1e3FXIcisYub-JI86t4-i5mlKnUr576LmaUqdSvnlaNC1qFtCayjdDDPSHJcn5vEnyLAzrj97ces_8eBeM_&_nc_ohc=WThKrOgd3XkAX8iyjsw&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDVAKYwemlgK7L9oP6n6c165zaM6Wq4cx2nqhBV-VXpUg&oe=64E5B38C" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/343980783_562200419332243_3117323347302229513_n.jpg?stp=dst-jpg_p600x600&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGHD1e3FXIcisYub-JI86t4-i5mlKnUr576LmaUqdSvnlaNC1qFtCayjdDDPSHJcn5vEnyLAzrj97ces_8eBeM_&_nc_ohc=WThKrOgd3XkAX8iyjsw&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDVAKYwemlgK7L9oP6n6c165zaM6Wq4cx2nqhBV-VXpUg&oe=64E5B38C" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/343980783_562200419332243_3117323347302229513_n.jpg?stp=dst-jpg_p600x600&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGHD1e3FXIcisYub-JI86t4-i5mlKnUr576LmaUqdSvnlaNC1qFtCayjdDDPSHJcn5vEnyLAzrj97ces_8eBeM_&_nc_ohc=WThKrOgd3XkAX8iyjsw&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDVAKYwemlgK7L9oP6n6c165zaM6Wq4cx2nqhBV-VXpUg&oe=64E5B38C" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/340770271_3436057889939230_3071878406081051910_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFeiOdft1vyRZnxfPo14-LvTtZbjfiB5h1O1luN-IHmHXVQG6dk3pUgC1bKmLfwZqeWWWz3Bdmy5LkJljlMOcN1&_nc_ohc=O75hWVSezScAX9WMJot&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfA9GePSE1G5FwbNmfuti-Vi9p3YyHJlYn1cWhAoVteVYA&oe=64E5A276" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/340770271_3436057889939230_3071878406081051910_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFeiOdft1vyRZnxfPo14-LvTtZbjfiB5h1O1luN-IHmHXVQG6dk3pUgC1bKmLfwZqeWWWz3Bdmy5LkJljlMOcN1&_nc_ohc=O75hWVSezScAX9WMJot&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfA9GePSE1G5FwbNmfuti-Vi9p3YyHJlYn1cWhAoVteVYA&oe=64E5A276" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/325411874_2150544438479662_8791637637022630999_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeF1htDbIvL9ReKWh5jMxrKNNs93-Ojq9pM2z3f46Or2k_Ma8XlTlLYabivvsvVY1Mvc9HmbCC9s-qHEcucOIFm5&_nc_ohc=7avcW9Kf3v8AX_puH5y&_nc_ht=scontent.fmnl13-1.fna&oh=00_AfBPq-NA-o1uWKMo1P0xHAzuyrV6pRFCyt2RrQI4H_u-fA&oe=64E5F207" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/325411874_2150544438479662_8791637637022630999_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeF1htDbIvL9ReKWh5jMxrKNNs93-Ojq9pM2z3f46Or2k_Ma8XlTlLYabivvsvVY1Mvc9HmbCC9s-qHEcucOIFm5&_nc_ohc=7avcW9Kf3v8AX_puH5y&_nc_ht=scontent.fmnl13-1.fna&oh=00_AfBPq-NA-o1uWKMo1P0xHAzuyrV6pRFCyt2RrQI4H_u-fA&oe=64E5F207" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/324732996_5700267700080853_4853035485114823803_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHgJWmNpAPCw2T6qB9dpzahtFKgyqgIfsu0UqDKqAh-y66n5mD6GGcHMIG6pIoE17k8dU_mPrVX25H2IDPghFB6&_nc_ohc=vleFGH_-fwsAX_n0uh7&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfCtEjr0KUOWiOFgPC83vejwZq6wdnCuhYUQwGe2-Espkg&oe=64E5ED46" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/324732996_5700267700080853_4853035485114823803_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHgJWmNpAPCw2T6qB9dpzahtFKgyqgIfsu0UqDKqAh-y66n5mD6GGcHMIG6pIoE17k8dU_mPrVX25H2IDPghFB6&_nc_ohc=vleFGH_-fwsAX_n0uh7&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfCtEjr0KUOWiOFgPC83vejwZq6wdnCuhYUQwGe2-Espkg&oe=64E5ED46" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="C:\Users\User\Desktop\iPortfolio\New folder\15.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="C:\Users\User\Desktop\iPortfolio\New folder\16.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="C:\Users\User\Desktop\iPortfolio\New folder\17.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="C:\Users\User\Desktop\iPortfolio\New folder\18.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-      
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="C:\Users\User\Desktop\iPortfolio\New folder\19.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="C:\Users\User\Desktop\iPortfolio\New folder\20.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/341702253_792473515631948_8147926174685699383_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGMUFX4YIPCEGetWjP0LwBELPGpJ6X5zFws8aknpfnMXFxQNlvOmlfNsahl6wPryMDlsFrXwtKSpDrXnh3PoCAO&_nc_ohc=jodGAUDyRuAAX8DL19G&_nc_ht=scontent.fmnl13-2.fna&oh=00_AfDdJyHnETDEnExgk5hcxmvHAC4z19IwWAYN6Pa3tSJ2AQ&oe=64E56594" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
-
-        
-           
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Please Contact me </p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Panabo City, Davao Del norte</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>ivansarsalejov@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+63 926 820 2109</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3957.215594669273!2d125.67894664754343!3d7.3296663338750045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1692427890023!5m2!1sen!2sph" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      <div class="w3-bar-item w3-button" onclick="selectLang(this)">
+        <input id="langId" class="w3-radio" type="radio" name="lang" value="id">
+        <label for="langId">Indonesian</label>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  <button class="w3-bar-item w3-button w3-ripple collapsed" onclick="dropdown(this)">
+    <span>Set Full Year</span>
+    <span class="w3-right"><svg width="10" height="10"><path d="M1 3L5 7L9 3Z"/></svg></span>
+    <span class="w3-right"><svg width="10" height="10"><path d="M1 7L5 3L9 7Z"/></svg></span>
+  </button>
+    <div class="w3-bar-block w3-light-grey">
+      <div class="w3-bar-item">
+        <input id="valYear" class="w3-input w3-border" type="text" placeholder="full year value...">
+      </div>
+      <button class="w3-bar-item w3-button w3-ripple" onclick="setYear()">Apply</button>
+    </div>
+  <button class="w3-bar-item w3-button w3-ripple collapsed" onclick="dropdown(this)">
+    <span>Set Month</span>
+    <span class="w3-right"><svg width="10" height="10"><path d="M1 3L5 7L9 3Z"/></svg></span>
+    <span class="w3-right"><svg width="10" height="10"><path d="M1 7L5 3L9 7Z"/></svg></span>
+  </button>
+    <div class="w3-bar-block w3-light-grey">
+      <div class="w3-bar-item">
+        <input id="valMonth" class="w3-input w3-border" type="text" placeholder="month value...">
+      </div>
+      <button class="w3-bar-item w3-button w3-ripple" onclick="setMonth()">Apply</button>
+    </div>
+  <button class="w3-bar-item w3-button w3-ripple collapsed" onclick="dropdown(this)">
+    <span>Set Theme</span>
+    <span class="w3-right"><svg width="10" height="10"><path d="M1 3L5 7L9 3Z"/></svg></span>
+    <span class="w3-right"><svg width="10" height="10"><path d="M1 7L5 3L9 7Z"/></svg></span>
+  </button>
+    <div class="w3-bar-block w3-light-grey">
+      <div class="w3-bar-item">
+        <input id="txtTheme" class="w3-input w3-border" type="text" placeholder="theme-color or index">
+      </div>
+      <button class="w3-bar-item w3-button w3-ripple" onclick="setTheme()">Apply</button>
+    </div>
+  <button class="w3-bar-item w3-button w3-ripple collapsed" onclick="dropdown(this)">
+    <span>Set Today Timeout</span>
+    <span class="w3-right"><svg width="10" height="10"><path d="M1 3L5 7L9 3Z"/></svg></span>
+    <span class="w3-right"><svg width="10" height="10"><path d="M1 7L5 3L9 7Z"/></svg></span>
+  </button>
+    <div class="w3-bar-block w3-light-grey">
+      <div class="w3-bar-item">
+        <input id="valTimeout" class="w3-input w3-border" type="text" placeholder="timeout value...">
+      </div>
+      <button class="w3-bar-item w3-button w3-ripple" onclick="setTodayTimeout()">Apply</button>
+    </div>
+  <a class="w3-bar-item w3-button w3-ripple" href="https://codepen.io/zulns/full/adqQjq">See My Datepicker</a>
+  <a class="w3-bar-item w3-button w3-ripple" href="https://codepen.io/zulns/full/BjejxN">See My Timepicker</a>
+</div>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div class="w3-main" style="margin-left:220px">
+  <div class="w3-container w3-padding w3-teal">
+    <button class="w3-button w3-ripple w3-xlarge w3-hide-large w3-left" style="margin:6px 8px 0px -16px" onclick="openSidebar()">
+      <svg width="18" height="23"><path d="M0 6L18 6L18 8L0 8Z M0 13L18 13L18 15L0 15Z M0 20L18 20L18 22L0 22Z"/></svg>
+    </button>
+    <h2>CARTEL CALENDAR HAHA</h2>
+  </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+  <div id="calendar" class="w3-container w3-margin-top"></div>
+</div>
