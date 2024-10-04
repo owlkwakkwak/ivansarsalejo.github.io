@@ -1,79 +1,102 @@
-<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:220px;z-index:2" id="mySidebar">
-  <button class="w3-bar-item w3-button w3-ripple w3-large w3-hide-large" onclick="closeSidebar()">Close<span class="w3-right">&times;</span></button>
-  <button class="w3-bar-item w3-button w3-ripple collapsed" onclick="dropdown(this)">
-    <span>Set Language</span>
-    <span class="w3-right"><svg width="10" height="10"><path d="M1 3L5 7L9 3Z"/></svg></span>
-    <span class="w3-right"><svg width="10" height="10"><path d="M1 7L5 3L9 7Z"/></svg></span>
-  </button>
-    <div class="w3-bar-block w3-light-grey">
-      <div class="w3-bar-item w3-button" onclick="selectLang(this)">
-        <input id="langEn" class="w3-radio" type="radio" name="lang" value="en" checked>
-        <label for="langEn">English</label>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Stay organized with our user-friendly Calendar featuring events, reminders, and a customizable interface. Built with HTML, CSS, and JavaScript. Start scheduling today!"
+    />
+    <meta
+      name="keywords"
+      content="calendar, events, reminders, javascript, html, css, open source coding"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calendar with Events</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="calendar">
+          <div class="month">
+            <i class="fas fa-angle-left prev"></i>
+            <div class="date">december 2015</div>
+            <i class="fas fa-angle-right next"></i>
+          </div>
+          <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="days"></div>
+          <div class="goto-today">
+            <div class="goto">
+              <input type="text" placeholder="mm/yyyy" class="date-input" />
+              <button class="goto-btn">Go</button>
+            </div>
+            <button class="today-btn">Today</button>
+          </div>
+        </div>
       </div>
-      <div class="w3-bar-item w3-button" onclick="selectLang(this)">
-        <input id="langAr" class="w3-radio" type="radio" name="lang" value="ar">
-        <label for="langAr">Arabic</label>
+      <div class="right">
+        <div class="today-date">
+          <div class="event-day">wed</div>
+          <div class="event-date">12th december 2022</div>
+        </div>
+        <div class="events"></div>
+        <div class="add-event-wrapper">
+          <div class="add-event-header">
+            <div class="title">Add Event</div>
+            <i class="fas fa-times close"></i>
+          </div>
+          <div class="add-event-body">
+            <div class="add-event-input">
+              <input type="text" placeholder="Event Name" class="event-name" />
+            </div>
+            <div class="add-event-input">
+              <input
+                type="text"
+                placeholder="Event Time From"
+                class="event-time-from"
+              />
+            </div>
+            <div class="add-event-input">
+              <input
+                type="text"
+                placeholder="Event Time To"
+                class="event-time-to"
+              />
+            </div>
+          </div>
+          <div class="add-event-footer">
+            <button class="add-event-btn">Add Event</button>
+          </div>
+        </div>
       </div>
-      <div class="w3-bar-item w3-button" onclick="selectLang(this)">
-        <input id="langId" class="w3-radio" type="radio" name="lang" value="id">
-        <label for="langId">Indonesian</label>
-      </div>
+      <button class="add-event">
+        <i class="fas fa-plus"></i>
+      </button>
     </div>
-  <button class="w3-bar-item w3-button w3-ripple collapsed" onclick="dropdown(this)">
-    <span>Set Full Year</span>
-    <span class="w3-right"><svg width="10" height="10"><path d="M1 3L5 7L9 3Z"/></svg></span>
-    <span class="w3-right"><svg width="10" height="10"><path d="M1 7L5 3L9 7Z"/></svg></span>
-  </button>
-    <div class="w3-bar-block w3-light-grey">
-      <div class="w3-bar-item">
-        <input id="valYear" class="w3-input w3-border" type="text" placeholder="full year value...">
-      </div>
-      <button class="w3-bar-item w3-button w3-ripple" onclick="setYear()">Apply</button>
-    </div>
-  <button class="w3-bar-item w3-button w3-ripple collapsed" onclick="dropdown(this)">
-    <span>Set Month</span>
-    <span class="w3-right"><svg width="10" height="10"><path d="M1 3L5 7L9 3Z"/></svg></span>
-    <span class="w3-right"><svg width="10" height="10"><path d="M1 7L5 3L9 7Z"/></svg></span>
-  </button>
-    <div class="w3-bar-block w3-light-grey">
-      <div class="w3-bar-item">
-        <input id="valMonth" class="w3-input w3-border" type="text" placeholder="month value...">
-      </div>
-      <button class="w3-bar-item w3-button w3-ripple" onclick="setMonth()">Apply</button>
-    </div>
-  <button class="w3-bar-item w3-button w3-ripple collapsed" onclick="dropdown(this)">
-    <span>Set Theme</span>
-    <span class="w3-right"><svg width="10" height="10"><path d="M1 3L5 7L9 3Z"/></svg></span>
-    <span class="w3-right"><svg width="10" height="10"><path d="M1 7L5 3L9 7Z"/></svg></span>
-  </button>
-    <div class="w3-bar-block w3-light-grey">
-      <div class="w3-bar-item">
-        <input id="txtTheme" class="w3-input w3-border" type="text" placeholder="theme-color or index">
-      </div>
-      <button class="w3-bar-item w3-button w3-ripple" onclick="setTheme()">Apply</button>
-    </div>
-  <button class="w3-bar-item w3-button w3-ripple collapsed" onclick="dropdown(this)">
-    <span>Set Today Timeout</span>
-    <span class="w3-right"><svg width="10" height="10"><path d="M1 3L5 7L9 3Z"/></svg></span>
-    <span class="w3-right"><svg width="10" height="10"><path d="M1 7L5 3L9 7Z"/></svg></span>
-  </button>
-    <div class="w3-bar-block w3-light-grey">
-      <div class="w3-bar-item">
-        <input id="valTimeout" class="w3-input w3-border" type="text" placeholder="timeout value...">
-      </div>
-      <button class="w3-bar-item w3-button w3-ripple" onclick="setTodayTimeout()">Apply</button>
-    </div>
-  <a class="w3-bar-item w3-button w3-ripple" href="https://codepen.io/zulns/full/adqQjq">See My Datepicker</a>
-  <a class="w3-bar-item w3-button w3-ripple" href="https://codepen.io/zulns/full/BjejxN">See My Timepicker</a>
-</div>
 
-<div class="w3-main" style="margin-left:220px">
-  <div class="w3-container w3-padding w3-teal">
-    <button class="w3-button w3-ripple w3-xlarge w3-hide-large w3-left" style="margin:6px 8px 0px -16px" onclick="openSidebar()">
-      <svg width="18" height="23"><path d="M0 6L18 6L18 8L0 8Z M0 13L18 13L18 15L0 15Z M0 20L18 20L18 22L0 22Z"/></svg>
-    </button>
-    <h2>CARTEL CALENDAR HAHA</h2>
-  </div>
+    <div class="credits">
+      <p>
+        Crafted with ❤️ by
+        <a href="https://youtu.be/6EVgmpm4z5U" target="_blank">Open Source Coding</a>
+      </p>
+    </div>
 
-  <div id="calendar" class="w3-container w3-margin-top"></div>
-</div>
+    <script src="script.js"></script>
+  </body>
+</html>
